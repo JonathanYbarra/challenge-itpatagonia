@@ -1,1 +1,1 @@
-export * from "./PhrasePage"
+export * from "./PhrasePage";
