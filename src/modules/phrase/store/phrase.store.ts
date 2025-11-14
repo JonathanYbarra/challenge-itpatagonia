@@ -40,7 +40,7 @@ export const usePhrase = create<PhrasesStore>()(
         },
       }),
       {
-        name: "phrase-storage"
+        name: "phrase-storage",
       }
     )
   )

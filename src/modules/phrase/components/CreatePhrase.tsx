@@ -35,8 +35,7 @@ export const CreatePhrase = () => {
         <form.Field
           name="phrase"
           validators={{
-            onChangeAsyncDebounceMs: 0,
-            onChangeAsync: ({ value }) => {
+            onChange: ({ value }) => {
               if (value.length < 1) {
                 return "La frase debe tener al menos 1 caracteres.";
               }
@@ -52,6 +51,7 @@ export const CreatePhrase = () => {
                 value={field.state.value}
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
+                placeholder="Escribe una frase.."
               />
               {field.state.meta.errors && (
                 <span className="text-destructive text-xs">{field.state.meta.errors[0]}</span>
