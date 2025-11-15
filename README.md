@@ -2,6 +2,8 @@
 
 Es una aplicación simple construida con React, Vite y TypeScript, como parte del challenge de IT Patagonia. Permite a los usuarios crear, filtrar y eliminar frases, con persistencia de datos en el LocalStorage.
 
+## 🚀 **Deploy en Vercel:** [https://challenge-itpatagonia.vercel.app/](https://challenge-itpatagonia.vercel.app/)
+
 ---
 
 ## ✨ Features
