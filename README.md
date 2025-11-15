@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Challenge IT Patagonia - Gestor de Frases
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Es una aplicación simple construida con React, Vite y TypeScript, como parte del challenge de IT Patagonia. Permite a los usuarios crear, filtrar y eliminar frases, con persistencia de datos en el LocalStorage.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Creación de Frases:** Añade nuevas frases a la colección.
+* **Eliminación de Frases:** Borra frases de la colección.
+* **Filtro Dinámico:** Busca en tiempo real las frases que coincidan con el texto ingresado.
+* **Persistencia:** Las frases se guardan en `localStorage` usando `zustand/persist`.
+* **Modo Oscuro:** Soporte para tema Light/Dark.
+* **Formulario Validado:** Control de formulario usando `TanStack Form`.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Stack Tecnológico
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+* **Framework:** React 18
+* **Bundler:** Vite
+* **Lenguaje:** TypeScript
+* **Gestión de Estado:** Zustand
+* **Estilos:** TailwindCSS
+* **Componentes UI:** shadcn/ui
+* **Formularios:** TanStack Form
+* **Routing:** TanStack Router
+* **Testing Unitario/Integración:** Vitest + React Testing Library
+* **Testing E2E:** Playwright
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## 🚀 Cómo ejecutar el proyecto
+
+Para levantar el proyecto localmente, sigue estos pasos:
+
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/JonathanYbarra/challenge-itpatagonia.git](https://github.com/JonathanYbarra/challenge-itpatagonia.git)
+cd challenge-itpatagonia
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+### 2. Instalar dependencias
+```bash
+npm install
+```
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+
+### 3. Ejecutar la aplicación
+```bash
+npm run dev
+```
+
+
+## 🧪 Cómo ejecutar las pruebas
+El proyecto cuenta con cobertura de pruebas unitarias, de integración y End-to-End.
+
+Pruebas Unitarias y de Integración (Vitest)
+```bash
+npm run test
+```
+
+
+## Pruebas End-to-End (Playwright)
+Para ejecutar los tests en modo "headless" (sin UI):
+```bash
+npx playwright test
+```
+
+
+## Para abrir la UI interactiva de Playwright (Recomendado):
+Para ejecutar los tests en modo "headless" (sin UI):
+```bash
+npx playwright test --ui
 ```
