@@ -6,6 +6,15 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./src/setupTest.ts"],
+    coverage: {
+      exclude: [
+        '**/*.config.ts',
+        '**/*.config.js',
+        '**/*.types.ts',
+        '**/App.ts',
+        '**/main.ts',
+      ]
+    }
   },
   resolve: {
     alias: {
