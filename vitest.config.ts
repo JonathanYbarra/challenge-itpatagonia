@@ -7,14 +7,8 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./src/setupTest.ts"],
     coverage: {
-      exclude: [
-        '**/*.config.ts',
-        '**/*.config.js',
-        '**/*.types.ts',
-        '**/App.ts',
-        '**/main.ts',
-      ]
-    }
+      exclude: ["**/*.config.ts", "**/*.config.js", "**/*.types.ts", "**/App.ts", "**/main.ts"],
+    },
   },
   resolve: {
     alias: {
